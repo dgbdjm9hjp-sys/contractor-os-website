@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contract Control Review — Contractor OS</title>
   <meta name="description" content="A practical contract control review for housing contractors dealing with delayed jobs, missing evidence, approval bottlenecks, and margin leakage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ── Header ──────────────────────────────────────────── -->
+  <!-- ── Header ──────────────────────────────────────────────────────────── -->
   <header class="site-header" role="banner">
     <div class="container">
       <nav class="nav-inner" aria-label="Primary navigation">
@@ -17,103 +19,202 @@
           Contractor<span>OS</span>
         </a>
 
-        <!-- Desktop CTA -->
-        <!--
-          CTA NOTE: This is a placeholder mailto link.
-          Replace with a real booking link (e.g. Calendly) once one exists.
-        -->
-        <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
-           class="nav-cta"
-           aria-label="Book a Contract Control Review">
-          Book a Review
-        </a>
+        <div class="nav-right">
+          <span class="nav-tagline">Contract control for contractor businesses</span>
 
-        <!-- Mobile toggle -->
+          <!--
+            CTA NOTE: Placeholder mailto — replace with a booking link (e.g. Calendly) once available.
+          -->
+          <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
+             class="nav-cta"
+             aria-label="Book a Contract Control Review">
+            Book a Review
+          </a>
+        </div>
+
         <button class="nav-toggle"
                 id="nav-toggle"
                 aria-expanded="false"
-                aria-controls="nav-cta-mobile"
+                aria-controls="nav-mobile-cta"
                 aria-label="Open navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </nav>
+    </div>
 
-      <!-- Mobile CTA (hidden by default, shown by JS) -->
+    <!-- Mobile CTA panel -->
+    <div class="nav-mobile-cta" id="nav-mobile-cta" aria-hidden="true">
       <!--
-        CTA NOTE: Placeholder mailto link — replace with booking link when available.
+        CTA NOTE: Placeholder mailto — replace with a booking link when available.
       -->
       <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
-         id="nav-cta-mobile"
          class="btn btn-primary"
-         hidden
-         style="display:block; margin-top: 14px; text-align:center;">
+         aria-label="Book a Contract Control Review">
         Book a Contract Control Review
       </a>
     </div>
   </header>
 
 
-  <!-- ── Hero ────────────────────────────────────────────── -->
+  <!-- ── Hero ────────────────────────────────────────────────────────────── -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="container">
-      <div class="hero-inner">
-        <span class="hero-eyebrow">Contract Control Review</span>
+      <div class="hero-layout">
 
-        <h1 id="hero-heading">
-          Find out where your contract is losing control before it costs you more money.
-        </h1>
+        <!-- Left: Copy -->
+        <div class="hero-copy">
+          <span class="hero-eyebrow">Contract Control Review</span>
 
-        <p class="hero-sub">
-          A practical review for contractor businesses that want clearer visibility of delayed jobs, missing evidence, client approvals, repeat visits, and margin leakage.
-        </p>
+          <h1 id="hero-heading">
+            Find out where your contract is losing control before it costs you more money.
+          </h1>
 
-        <ul class="hero-bullets" aria-label="Key facts">
-          <li>Built for live contractor operations</li>
-          <li>Focused on control, evidence, and approvals</li>
-          <li>No fixed savings claims before baseline data</li>
-        </ul>
+          <p class="hero-sub">
+            A practical review for contractor businesses that want clearer visibility of delayed jobs, missing evidence, client approvals, repeat visits, and margin leakage.
+          </p>
 
-        <!--
-          CTA NOTE: Placeholder mailto link — replace with a booking tool link when available.
-        -->
-        <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
-           class="btn btn-primary"
-           aria-label="Book a Contract Control Review">
-          Book a Contract Control Review
-        </a>
+          <ul class="hero-bullets" aria-label="Key facts">
+            <li>Built for live contractor operations</li>
+            <li>Focused on control, evidence, and approvals</li>
+            <li>No fixed savings claims before baseline data</li>
+          </ul>
+
+          <!--
+            CTA NOTE: Placeholder mailto — replace with a booking tool link when available.
+          -->
+          <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
+             class="btn btn-primary btn-arrow"
+             aria-label="Book a Contract Control Review">
+            Book a Contract Control Review
+          </a>
+        </div>
+
+        <!-- Right: Operational visual panel -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-panel">
+            <div class="hero-panel-header">
+              <span class="hero-panel-title">Live Contract View</span>
+              <span class="hero-panel-badge">7 active issues</span>
+            </div>
+
+            <div class="job-card">
+              <span class="job-dot dot-red"></span>
+              <div class="job-info">
+                <div class="job-label">Void — 14 Ashbrook Lane</div>
+                <div class="job-meta">No owner assigned · 9 days open</div>
+              </div>
+              <span class="job-tag tag-blocked">Blocked</span>
+            </div>
+
+            <div class="job-card">
+              <span class="job-dot dot-amber"></span>
+              <div class="job-info">
+                <div class="job-label">Planned Works — Block C</div>
+                <div class="job-meta">Awaiting client sign-off · Day 6</div>
+              </div>
+              <span class="job-tag tag-approval">Approval</span>
+            </div>
+
+            <div class="job-card">
+              <span class="job-dot dot-amber"></span>
+              <div class="job-info">
+                <div class="job-label">Repairs — 7 Thornfield Road</div>
+                <div class="job-meta">Completion claimed · evidence missing</div>
+              </div>
+              <span class="job-tag tag-evidence">Evidence</span>
+            </div>
+
+            <div class="job-card">
+              <span class="job-dot dot-red"></span>
+              <div class="job-info">
+                <div class="job-label">FM — Heating, Site B</div>
+                <div class="job-meta">Second visit booked · first notes incomplete</div>
+              </div>
+              <span class="job-tag tag-rework">Rework</span>
+            </div>
+
+            <div class="job-card">
+              <span class="job-dot dot-green"></span>
+              <div class="job-info">
+                <div class="job-label">Extra Care — Maple House</div>
+                <div class="job-meta">Evidence complete · ready to close</div>
+              </div>
+              <span class="job-tag tag-clear">Clear</span>
+            </div>
+
+            <div class="hero-panel-footer">
+              <div class="hero-panel-stat">
+                <div class="hero-panel-stat-value">4</div>
+                <div class="hero-panel-stat-label">Blocked</div>
+              </div>
+              <div class="hero-panel-stat">
+                <div class="hero-panel-stat-value">6</div>
+                <div class="hero-panel-stat-label">Approvals</div>
+              </div>
+              <div class="hero-panel-stat">
+                <div class="hero-panel-stat-value">3</div>
+                <div class="hero-panel-stat-label">Missing evidence</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- ── Problem ─────────────────────────────────────────── -->
+  <!-- ── Problem ──────────────────────────────────────────────────────────── -->
   <section class="problem" aria-labelledby="problem-heading">
     <div class="container">
       <p class="section-label">The Problem</p>
+      <div class="section-divider" aria-hidden="true"></div>
       <h2 class="section-title" id="problem-heading">
         Most contract problems do not start as big failures. They start as small gaps.
       </h2>
-      <p class="section-body">
-        Most delivery teams are not short on effort. They are short on clear control. Jobs are split across emails, WhatsApp, spreadsheets, and paper. Evidence is missing at handover. Approvals slow work down. Managers spend hours chasing updates. By the time these issues show up in client meetings, complaints, payment delays, or margin reports, the damage has already started.
-      </p>
 
-      <ul class="problem-list" aria-label="Common contract control problems">
-        <li class="problem-item">A job sits waiting for approval.</li>
-        <li class="problem-item">A photo is missing at handover.</li>
-        <li class="problem-item">A return visit is booked because the first visit did not capture enough information.</li>
-        <li class="problem-item">A manager has to chase three people to find out what is happening on a live job.</li>
-        <li class="problem-item">A cost overrun is spotted after the job is finished.</li>
-      </ul>
+      <div class="problem-inner">
+        <div class="problem-copy">
+          <p>
+            Most delivery teams are not short on effort. They are short on clear control.
+          </p>
+          <p>
+            Jobs are split across emails, WhatsApp, spreadsheets, and paper. Evidence is missing at handover. Approvals slow work down. Managers spend hours chasing updates. By the time these issues show up in client meetings, complaints, payment delays, or margin reports, the damage has already started.
+          </p>
+        </div>
+
+        <ul class="problem-list" aria-label="Common contract control problems">
+          <li class="problem-item">
+            <span class="problem-item-icon" aria-hidden="true">→</span>
+            A job sits waiting for approval.
+          </li>
+          <li class="problem-item">
+            <span class="problem-item-icon" aria-hidden="true">→</span>
+            A photo is missing at handover.
+          </li>
+          <li class="problem-item">
+            <span class="problem-item-icon" aria-hidden="true">→</span>
+            A return visit is booked because the first visit did not capture enough information.
+          </li>
+          <li class="problem-item">
+            <span class="problem-item-icon" aria-hidden="true">→</span>
+            A manager has to chase three people to find out what is happening on a live job.
+          </li>
+          <li class="problem-item">
+            <span class="problem-item-icon" aria-hidden="true">→</span>
+            A cost overrun is spotted after the job is finished.
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 
 
-  <!-- ── Offer ────────────────────────────────────────────── -->
+  <!-- ── Offer ────────────────────────────────────────────────────────────── -->
   <section class="offer" aria-labelledby="offer-heading">
     <div class="container">
       <p class="section-label">The Review</p>
+      <div class="section-divider" aria-hidden="true"></div>
       <h2 class="section-title" id="offer-heading">
         What is the Contract Control Review?
       </h2>
@@ -130,12 +231,12 @@
             The aim is not to sell you a generic system. The aim is to show where your current operation is leaking time, control, evidence, or margin.
           </p>
           <p>
-            This is not a software demo. It is an operations-focused review with a clear findings report and practical improvement plan at the end.
+            This is not a software demo. It is an operations-focused review with a clear findings report and a practical improvement plan at the end.
           </p>
         </div>
 
         <div class="offer-highlight">
-          <h3>What the review covers</h3>
+          <p class="offer-highlight-label">What the review covers</p>
           <ul>
             <li>Workflow review</li>
             <li>Sample job review</li>
@@ -153,13 +254,12 @@
   </section>
 
 
-  <!-- ── What We Review ──────────────────────────────────── -->
+  <!-- ── What We Review ───────────────────────────────────────────────────── -->
   <section class="review-areas" aria-labelledby="review-heading">
     <div class="container">
       <p class="section-label">Areas Reviewed</p>
-      <h2 class="section-title" id="review-heading">
-        What we look at
-      </h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <h2 class="section-title" id="review-heading">What we look at</h2>
       <p class="section-body">
         The review is structured around the areas where housing contractors most commonly lose control of live jobs.
       </p>
@@ -170,49 +270,49 @@
           <p class="card-number">01</p>
           <h3>Live job visibility</h3>
           <p>How you track active jobs, stages, blockers, owners, and next actions.</p>
-          <p class="card-example">Example: Jobs stuck in progress with no clear owner or next step.</p>
+          <p class="card-example">Jobs stuck in progress with no clear owner or next step.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">02</p>
           <h3>Delays and approvals</h3>
           <p>Where work waits for client decisions, internal approval, further information, materials, or access.</p>
-          <p class="card-example">Example: Additional works sitting unapproved while the programme drifts.</p>
+          <p class="card-example">Additional works sitting unapproved while the programme drifts.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">03</p>
           <h3>Evidence and handover</h3>
           <p>Whether job records contain the photos, notes, checks, certificates, and sign-off evidence needed to protect the business.</p>
-          <p class="card-example">Example: Completion claimed but final photo evidence is missing.</p>
+          <p class="card-example">Completion claimed but final photo evidence is missing.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">04</p>
           <h3>Repeat visits and rework</h3>
           <p>Where poor diagnosis, missing materials, unclear scope, or weak handover creates extra visits.</p>
-          <p class="card-example">Example: Operatives returning because first-visit notes did not capture the full issue.</p>
+          <p class="card-example">Operatives returning because first-visit notes did not capture the full issue.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">05</p>
           <h3>Manager chasing load</h3>
           <p>How much time managers spend finding updates instead of managing outcomes.</p>
-          <p class="card-example">Example: Contract managers chasing WhatsApp, emails, spreadsheets, and site calls.</p>
+          <p class="card-example">Contract managers chasing WhatsApp, emails, spreadsheets, and site calls.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">06</p>
           <h3>Reporting and client confidence</h3>
           <p>How well your current reports show real contract control, not surface-level activity.</p>
-          <p class="card-example">Example: Reports show completed jobs but not blockers, approval delays, or evidence gaps.</p>
+          <p class="card-example">Reports show completed jobs but not blockers, approval delays, or evidence gaps.</p>
         </article>
 
         <article class="card" role="listitem">
           <p class="card-number">07</p>
           <h3>Commercial leakage</h3>
           <p>Where labour, materials, variations, missed extras, or late approvals create margin risk.</p>
-          <p class="card-example">Example: Extra labour used before the cost impact is visible.</p>
+          <p class="card-example">Extra labour used before the cost impact is visible.</p>
         </article>
 
       </div>
@@ -220,13 +320,12 @@
   </section>
 
 
-  <!-- ── What You Get ─────────────────────────────────────── -->
+  <!-- ── What You Get ──────────────────────────────────────────────────────── -->
   <section class="what-you-get" aria-labelledby="deliverables-heading">
     <div class="container">
       <p class="section-label">What You Receive</p>
-      <h2 class="section-title" id="deliverables-heading">
-        What the review delivers
-      </h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <h2 class="section-title" id="deliverables-heading">What the review delivers</h2>
       <p class="section-body">
         At the end of the review you receive a clear set of outputs you can act on immediately.
       </p>
@@ -288,41 +387,55 @@
   </section>
 
 
-  <!-- ── Guardrails ───────────────────────────────────────── -->
+  <!-- ── Guardrails ────────────────────────────────────────────────────────── -->
   <section class="guardrails" aria-labelledby="guardrails-heading">
     <div class="container">
       <p class="section-label">How We Work</p>
-      <h2 class="section-title" id="guardrails-heading">
-        What we do not do
-      </h2>
+      <h2 class="section-title" id="guardrails-heading">What we do not do</h2>
 
       <div class="guardrails-grid" role="list">
-        <div class="guardrail-item" role="listitem">No fixed savings claims before baseline data.</div>
-        <div class="guardrail-item" role="listitem">No invented case studies or invented client results.</div>
-        <div class="guardrail-item" role="listitem">No pressure to buy software before the problem is clear.</div>
-        <div class="guardrail-item" role="listitem">No AI-heavy positioning. This review is operational and human-led.</div>
+
+        <div class="guardrail-item" role="listitem">
+          <div class="guardrail-check" aria-hidden="true">✓</div>
+          No fixed savings claims before baseline data.
+        </div>
+
+        <div class="guardrail-item" role="listitem">
+          <div class="guardrail-check" aria-hidden="true">✓</div>
+          No invented case studies or invented client results.
+        </div>
+
+        <div class="guardrail-item" role="listitem">
+          <div class="guardrail-check" aria-hidden="true">✓</div>
+          No pressure to buy software before the problem is clear.
+        </div>
+
+        <div class="guardrail-item" role="listitem">
+          <div class="guardrail-check" aria-hidden="true">✓</div>
+          No AI-heavy positioning. This review is operational and human-led.
+        </div>
+
       </div>
     </div>
   </section>
 
 
-  <!-- ── Who It's For ─────────────────────────────────────── -->
+  <!-- ── Who It's For ──────────────────────────────────────────────────────── -->
   <section class="who-its-for" aria-labelledby="who-heading">
     <div class="container">
       <p class="section-label">Is This Right For You?</p>
-      <h2 class="section-title" id="who-heading">
-        Who this review is for
-      </h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <h2 class="section-title" id="who-heading">Who this review is for</h2>
       <p class="section-body">
         This review is for contractor businesses running housing repairs, voids, planned works, maintenance, compliance, extra care, or FM contracts. It is suited to owners, managing directors, operations directors, contract managers, and commercial managers.
       </p>
 
       <div class="fit-grid">
         <div class="fit-box">
-          <h3>
-            <span class="badge badge-yes" aria-hidden="true">✓</span>
-            A good fit if
-          </h3>
+          <div class="fit-header">
+            <span class="fit-badge fit-badge-yes" aria-hidden="true">✓</span>
+            <h3>A good fit if</h3>
+          </div>
           <ul class="fit-yes">
             <li>Managers are chasing updates manually</li>
             <li>Jobs are delayed by approvals or missing information</li>
@@ -334,10 +447,10 @@
         </div>
 
         <div class="fit-box">
-          <h3>
-            <span class="badge badge-no" aria-hidden="true">✕</span>
-            Not a fit if
-          </h3>
+          <div class="fit-header">
+            <span class="fit-badge fit-badge-no" aria-hidden="true">✕</span>
+            <h3>Not a fit if</h3>
+          </div>
           <ul class="fit-no">
             <li>You are looking for a generic CRM</li>
             <li>You want AI for the sake of AI</li>
@@ -349,32 +462,35 @@
   </section>
 
 
-  <!-- ── How It Works ─────────────────────────────────────── -->
+  <!-- ── How It Works ──────────────────────────────────────────────────────── -->
   <section class="how-it-works" aria-labelledby="process-heading">
     <div class="container">
       <p class="section-label">The Process</p>
-      <h2 class="section-title" id="process-heading">
-        How it works
-      </h2>
+      <div class="section-divider" aria-hidden="true"></div>
+      <h2 class="section-title" id="process-heading">How it works</h2>
 
-      <div class="steps" role="list">
+      <div class="steps-row" role="list">
 
         <article class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">1</div>
           <h3>Short fit call</h3>
           <p>We confirm your contract type, workstream, current process, and main pressure points.</p>
         </article>
 
         <article class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">2</div>
           <h3>Contract control review</h3>
           <p>We review how work moves from instruction to completion, including approvals, evidence, updates, and reporting.</p>
         </article>
 
         <article class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">3</div>
           <h3>Findings report</h3>
           <p>You receive a clear summary of control gaps, risks, and improvement priorities.</p>
         </article>
 
         <article class="step" role="listitem">
+          <div class="step-num" aria-hidden="true">4</div>
           <h3>30-day improvement plan</h3>
           <p>We agree the most practical actions to tighten visibility, reduce chasing, and improve evidence control.</p>
         </article>
@@ -384,10 +500,11 @@
   </section>
 
 
-  <!-- ── FAQ ──────────────────────────────────────────────── -->
+  <!-- ── FAQ ───────────────────────────────────────────────────────────────── -->
   <section class="faq" aria-labelledby="faq-heading">
     <div class="container">
       <p class="section-label">Questions</p>
+      <div class="section-divider" aria-hidden="true"></div>
       <h2 class="section-title" id="faq-heading">Frequently asked questions</h2>
 
       <div class="faq-list">
@@ -477,36 +594,43 @@
   </section>
 
 
-  <!-- ── Final CTA ─────────────────────────────────────────── -->
+  <!-- ── Final CTA ─────────────────────────────────────────────────────────── -->
   <section class="final-cta" aria-labelledby="final-cta-heading">
     <div class="container">
-      <h2 class="section-title" id="final-cta-heading">
-        Get a clearer view of what is stuck, missing, delayed, or leaking margin.
-      </h2>
-      <p class="section-body">
-        The review gives you a practical starting point before you commit to software, setup, or wider implementation.
-      </p>
+      <div class="final-cta-inner">
+        <p class="section-label">Get Started</p>
+        <h2 class="section-title" id="final-cta-heading">
+          Get a clearer view of what is stuck, missing, delayed, or leaking margin.
+        </h2>
+        <p class="section-body">
+          The review gives you a practical starting point before you commit to software, setup, or wider implementation.
+        </p>
 
-      <!--
-        CTA NOTE: Placeholder mailto link — replace with a real booking tool link (e.g. Calendly)
-        once one is available. Update the href in the nav, hero, and here consistently.
-      -->
-      <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
-         class="btn btn-primary"
-         aria-label="Book a Contract Control Review">
-        Book a Contract Control Review
-      </a>
+        <!--
+          CTA NOTE: Placeholder mailto link — replace with a real booking tool link (e.g. Calendly)
+          once one is available. Update all four instances in this file consistently.
+        -->
+        <a href="mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review"
+           class="btn btn-primary btn-arrow"
+           aria-label="Book a Contract Control Review">
+          Book a Contract Control Review
+        </a>
+      </div>
     </div>
   </section>
 
 
-  <!-- ── Footer ────────────────────────────────────────────── -->
+  <!-- ── Footer ────────────────────────────────────────────────────────────── -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">Contractor<span>OS</span></span>
-        <span>Contract control for contractor businesses.</span>
-        <span>&copy; 2026 Contractor OS. All rights reserved.</span>
+        <div class="footer-meta">
+          <a href="mailto:hello@contractoros.co.uk" class="footer-email">
+            hello@contractoros.co.uk
+          </a>
+          <span class="footer-copy">&copy; 2026 Contractor OS. All rights reserved.</span>
+        </div>
       </div>
     </div>
   </footer>

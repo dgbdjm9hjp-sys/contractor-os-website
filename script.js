@@ -1,17 +1,18 @@
-/* Contractor OS — minimal JS for mobile nav and FAQ accordion */
+/* Contractor OS — mobile nav and FAQ accordion */
 
 (function () {
   'use strict';
 
   // Mobile nav toggle
   var toggle = document.getElementById('nav-toggle');
-  var navCta = document.getElementById('nav-cta-mobile');
+  var mobilePanel = document.getElementById('nav-mobile-cta');
 
-  if (toggle && navCta) {
+  if (toggle && mobilePanel) {
     toggle.addEventListener('click', function () {
       var expanded = toggle.getAttribute('aria-expanded') === 'true';
       toggle.setAttribute('aria-expanded', String(!expanded));
-      navCta.hidden = !navCta.hidden;
+      mobilePanel.setAttribute('aria-hidden', String(expanded));
+      mobilePanel.classList.toggle('is-open', !expanded);
     });
   }
 
@@ -25,14 +26,12 @@
     btn.addEventListener('click', function () {
       var isOpen = item.classList.contains('open');
 
-      // Close all
       faqItems.forEach(function (i) {
         i.classList.remove('open');
         var q = i.querySelector('.faq-question');
         if (q) q.setAttribute('aria-expanded', 'false');
       });
 
-      // Open clicked if it was closed
       if (!isOpen) {
         item.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
