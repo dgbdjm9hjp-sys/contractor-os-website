@@ -306,12 +306,16 @@ section { padding: var(--section-gap) 0; }
   border-radius: 2px;
 }
 
+.hero-copy {
+  max-width: 600px;
+}
+
 .hero h1 {
   font-family: var(--font-head);
-  font-size: clamp(1.9rem, 4.2vw, 3rem);
+  font-size: clamp(1.75rem, 3.6vw, 2.6rem);
   font-weight: 700;
-  line-height: 1.13;
-  letter-spacing: -0.03em;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   color: var(--white);
   margin-bottom: 22px;
 }
