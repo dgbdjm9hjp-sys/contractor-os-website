@@ -2043,6 +2043,96 @@ section { padding: var(--section-gap) 0; }
   .workflow-arrow   { display: none; }
 }
 
+/* ── Free Tracker section ─────────────────────────────────────────────────── */
+.free-tracker {
+  background: var(--white);
+  padding: 80px 0;
+}
+
+.tracker-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 32px;
+  margin: 32px 0 36px;
+}
+
+.tracker-feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--offwhite);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.tf-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--navy);
+  border-radius: 6px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.tf-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.tracker-cta-row {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tracker-bridge {
+  background: var(--navy);
+  border-radius: var(--radius-lg, 12px);
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.tracker-bridge p {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.tracker-bridge span {
+  color: var(--orange);
+}
+
+/* ── Final CTA secondary review link ─────────────────────────────────────── */
+.final-cta-review-link {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.final-cta-review-link:hover {
+  color: #fff;
+  border-color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 768px) {
+  .tracker-features { grid-template-columns: 1fr; }
+  .tracker-bridge   { padding: 24px 20px; }
+  .tracker-bridge p { font-size: 1rem; }
+}
+
 
 /* ═══════════════════════════════════════════════════════════════════════════
    NEW SECTION STYLES — REDESIGN
