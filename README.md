@@ -50,7 +50,7 @@ git push -u origin main
 All CTA buttons currently use a placeholder mailto link:
 
 ```
-mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review
+mailto:sean@contractoros.uk?subject=Contract%20Control%20Review
 ```
 
 When a booking tool (such as Calendly) is set up, replace this link in three places inside `index.html`:
@@ -60,7 +60,7 @@ When a booking tool (such as Calendly) is set up, replace this link in three pla
 - Hero CTA
 - Final CTA
 
-Search for `mailto:hello@contractoros.co.uk` to find all instances.
+Search for `mailto:sean@contractoros.uk` to find all instances.
 
 ---
 

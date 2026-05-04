@@ -1080,6 +1080,19 @@ section { padding: var(--section-gap) 0; }
 
 .footer-email:hover { color: rgba(255,255,255,0.8); }
 
+.footer-contact {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+
+.footer-contact a {
+  color: rgba(255,255,255,0.7);
+  transition: color 0.15s;
+}
+
+.footer-contact a:hover { color: var(--white); }
+
 .footer-copy {
   font-size: 0.78rem;
   color: rgba(255,255,255,0.28);

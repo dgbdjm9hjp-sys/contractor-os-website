@@ -379,10 +379,10 @@ This is the only primary CTA on the page. It appears in:
 
 All instances use the placeholder mailto link until a booking tool is configured:
 ```
-mailto:hello@contractoros.co.uk?subject=Contract%20Control%20Review
+mailto:sean@contractoros.uk?subject=Contract%20Control%20Review
 ```
 
-Search for `mailto:hello@contractoros.co.uk` to find and replace all instances when a real link is available.
+Search for `mailto:sean@contractoros.uk` to find and replace all instances when a real link is available.
 
 ### Conversion rules
 
